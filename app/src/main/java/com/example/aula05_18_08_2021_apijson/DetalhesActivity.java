@@ -20,7 +20,7 @@ public class DetalhesActivity extends AppCompatActivity {
         txtNome = findViewById(R.id.txtNome);
         imgLogo = findViewById(R.id.imgLogo);
 
-        //capturando o caminho de tela que foi utilizado para abrir esta tela
+        //capturando o caminho de tela que foi utilizado para abrir esta telass
         Intent caminhoTela = getIntent();
 
         //verifica se existe um caminho valido
@@ -30,9 +30,9 @@ public class DetalhesActivity extends AppCompatActivity {
 
             //verifica se existe algum parametro adicionado no caminho de tela
             if (parans != null) {
-                String nome = parans.getString("nome");
-                String logo = parans.getString("logo");
-                int codigo = parans.getInt("codigo");
+                String nome = parans.getString("api/produto");
+                String logo = parans.getString("api/foto");
+                int codigo = parans.getInt("api/id");
 
                 txtNome.setText(nome);
                 new DownloadImagem(imgLogo).execute(logo);

@@ -50,12 +50,12 @@ public class BuscaDados extends AsyncTask<String, Void, ArrayList<Produtos>> {
                     Produtos produtos = new Produtos();
 
                     //pegando os valores do JSON e salvando nos campos da classe
-                    produtos.codigo = jo.getInt("Emi_Codigo");
-                    produtos.nome = jo.getString("Emi_Nome");
-                    produtos.logo = jo.getString("Emi_Logo");
+                    produtos.codigo = jo.getInt("id");
+                    produtos.nome = jo.getString("produto");
+                    produtos.logo = jo.getString("foto");
 
                     produtos.logo = produtos.logo.replace("~/",
-                            "http://controle.mdvsistemas.com.br/");
+                            "http://cssmodas.herokuapp.com/api/produtos/data/");
 
                     //adiconando a emissora na lista de retorno
                     listaRetorno.add(produtos);
